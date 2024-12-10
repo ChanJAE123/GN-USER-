@@ -1,0 +1,33 @@
+# using randint
+
+import random
+def guess(x):
+    number = random.randint(1, x)
+    guess = 0
+    attempt = 0
+    while guess != number:
+        guess = int(input(f"Guess a number between 1 and {x}: "))
+        attempt += 1
+        if guess < number:
+            print("Too low, Try again.")
+        elif guess > number:
+            print("Too high, Try again.")
+        else:
+            print(f"Congrats! Your guess {number} is correct in {attempt} attempt/s!")
+        
+guess(10)
+
+
+# #using randrange
+import random
+
+def guess(x):
+    number = random.randrange(start=5)
+    guess = 0
+    while guess != number:
+        guess = int(input(f"Guess a number from 1 to {x}: "))
+        if guess == number:
+            print(f"Yay, Your guess ({guess}) is correct!")
+        else:
+            print("Wrong! Try Again.")
+guess(5)
